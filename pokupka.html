@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+    <link rel="stylesheet" href="styles/pokupka.css">
+</head>
+<style>
+    body {
+        transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark-mode {
+        background-color: #121212;
+        color: #ffffff;
+    }
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://via.placeholder.com/150x50" alt="Логотип">
+        </div>
+        <div class="contact-info">
+            <p>8 800 250 25 25</p>
+            <p>Звонок по России бесплатный</p>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="#">Ваша корзина</a> >
+        <a href="#">Пункт самовывоза</a> >
+        <span>Способ оплаты</span> >
+        <span>Подтверждение заказа</span>
+    </nav>
+
+    <main>
+        <section class="contact-form">
+            <h2>Контактное лицо</h2>
+            <p>Все поля формы обязательны для заполнения</p>
+            <form action="#">
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+
+                <button type="submit">Получить код</button>
+
+                <label for="first-name">Имя</label>
+                <input type="text" id="first-name" name="first-name" required>
+
+                <label for="last-name">Фамилия</label>
+                <input type="text" id="last-name" name="last-name" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </form>
+        </section>
+
+        <aside class="order-summary">
+            <h3>Ваш заказ</h3>
+            <p>1 товар в корзине</p>
+            <p><strong>Сумма</strong>: 109 999 р.</p>
+            <p><strong>Самовывоз</strong>: Бесплатно</p>
+            <p><strong>Всего к оплате: 109 999 р.</strong><p>
+
+            <button class="checkout-btn">Перейти к оплате</button>
+
+            <p class="terms">
+                Нажимая кнопку Перейти к оплате, я соглашаюсь с условиями Оферты, включающей условия обработки персональных данных.
+            </p>
+
+            <p class="payment-info">
+                Онлайн-оплату покупки необходимо совершить в течение 3 часов после оформления заказа. Если оплата не проведена в срок, заказ автоматически отменяется. Для товаров по предзаказу срок на оплату покупки составляет 2 часа.
+            </p>
+            <button id="dark-mode-toggle">Toggle Dark Mode</button>
+        </aside>
+    </main>
+    <script>
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        toggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+    });
+        document.querySelector('form').addEventListener('submit', function(event) {
+            const phoneInput = document.getElementById('phone');
+            const emailInput = document.getElementById('email');
+            let valid = true;
+    
+            if (!phoneInput.value.match(/^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/)) {
+                valid = false;
+                alert('Пожалуйста, введите корректный номер телефона.');
+            }
+    
+            if (!emailInput.value.includes('@')) {
+                valid = false;
+                alert('Пожалуйста, введите корректный адрес электронной почты.');
+            }
+    
+            if (!valid) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+</html>

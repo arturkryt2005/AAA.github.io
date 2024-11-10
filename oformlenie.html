@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма оплаты</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('./images/car.jpeg');
+            background-size: cover;
+            background-repeat: repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h1 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #5a4a4a;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .payment-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .payment-option {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #5a4a4a;
+        }
+        .payment-option img {
+            width: 24px;
+            margin-right: 5px;
+        }
+
+        @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+        }
+
+.rotate-box {
+  width: 100px;
+  height: 100px;
+  background-color: #673ab7;
+  animation: rotate 3s linear infinite;
+}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Ведущий на свадьбу Олег Петров. Форма оплаты</h1>
+    <form>
+        <input type="text" placeholder="Фамилия и Имя" required>
+        <input type="tel" placeholder="Телефон" required>
+        <input type="email" placeholder="Email" required>
+        <input type="date" placeholder="Дата мероприятия" required>
+        <input type="number" placeholder="Сумма, руб." required>
+    </form>
+
+    <h2>Способы оплаты</h2>
+    <div class="payment-options">
+        <div class="payment-option">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPFzRy8ax3h59E9kUpcthkjmK8ejKzFvXMvw&s" alt="Visa"> Банковские карты
+        </div>
+        <div class="payment-option">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCYOYn7twEsiUlhMb3peloGlvHzVgMi0KM8g&s" alt="Яндекс.Деньги"> Яндекс.Деньги
+        </div>
+        <div class="payment-option">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCYOYn7twEsiUlhMb3peloGlvHzVgMi0KM8g&s" alt="WebMoney"> WebMoney (WMR)
+        </div>
+        <div class="payment-option">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCYOYn7twEsiUlhMb3peloGlvHzVgMi0KM8g&s" alt="Наличные в терминале"> Наличные в терминале
+        </div>
+        <div class="payment-option">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCYOYn7twEsiUlhMb3peloGlvHzVgMi0KM8g&s" alt="Альфа-Клик"> Альфа-Клик
+        </div>
+        <div class="payment-option">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCYOYn7twEsiUlhMb3peloGlvHzVgMi0KM8g&s" alt="Сбербанк"> Сбербанк: оплата по SMS или Сбербанк Онлайн
+        </div>
+        <div class="payment-option">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCYOYn7twEsiUlhMb3peloGlvHzVgMi0KM8g&s" alt="Промсвязьбанк"> Интернет-банк Промсвязьбанка PSB-Retail
+        </div>
+        <div class="payment-option">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCYOYn7twEsiUlhMb3peloGlvHzVgMi0KM8g&s" alt="MasterPass"> MasterPass
+        </div>
+        <div class="rotate-box"></div>
+    </div>
+</div>
+
+</body>
+</html>
