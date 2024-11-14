@@ -101,6 +101,7 @@ p {
 .gg {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 @keyframes move {
     0% {
